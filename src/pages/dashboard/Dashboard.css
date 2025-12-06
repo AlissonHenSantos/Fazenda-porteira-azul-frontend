@@ -1,0 +1,117 @@
+
+:root{
+  --blue:#0a66c2;
+  --blue-dark:#084b8f;
+  --white:#ffffff;
+  --muted:#f4f8fb;
+  --sell:#e64949;
+  --keep:#2aa05a;
+  --card-radius:10px;
+}
+
+.dashboard{
+  padding:24px;
+  min-height:100vh;
+  background: linear-gradient(180deg,var(--muted), #eaf4ff);
+  color:#0d1b2a;
+  font-family: system-ui,Segoe UI,Helvetica,Arial,sans-serif;
+}
+
+.dashboard-header h1{
+  margin:0 0 4px 0;
+  color:var(--blue-dark);
+}
+
+.dashboard-header p{
+  margin:0 0 18px 0;
+  color:#3b5168;
+  font-size:13px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+  gap:16px;
+}
+
+.card{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px;
+  background:var(--white);
+  border-radius:var(--card-radius);
+  box-shadow:0 8px 22px rgba(10,102,194,0.07);
+  border-top:6px solid var(--blue);
+}
+
+.card-left{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.card-icon{
+  font-size:28px;
+  color:var(--blue);
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+}
+
+.card-title strong{display:block}
+.card-title .muted{font-size:12px;color:#6b7a89}
+
+.card-right{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:6px;
+  min-width:110px;
+}
+
+.price{
+  font-weight:700;
+  color:var(--blue-dark);
+}
+
+.chg{
+  font-size:13px;
+  display:inline-flex;
+  gap:6px;
+  align-items:center;
+  padding:4px 8px;
+  border-radius:999px;
+}
+
+.chg.up{ background: rgba(42,160,90,0.08); color:var(--keep) }
+.chg.down{ background: rgba(230,73,73,0.06); color:var(--sell) }
+
+.action{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  padding:6px 10px;
+  border-radius:8px;
+  font-weight:600;
+  font-size:13px;
+}
+
+.action.sell{
+  background: rgba(230,73,73,0.08);
+  color: var(--sell);
+}
+
+.action.keep{
+  background: rgba(42,160,90,0.08);
+  color: var(--keep);
+}
+
+
+@media (max-width:480px){
+  .card{ flex-direction:column; align-items:flex-start; gap:10px }
+  .card-right{ align-items:flex-start }
+}
