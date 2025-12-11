@@ -19,6 +19,7 @@ export default function  Login () {
             const res = await client.post('/login', { email, password });
             const data = res.data;
             setSuccess('Login realizado com sucesso');
+            window.location.href="/dashboard"
             if (data.token) localStorage.setItem('token', data.token);
         } catch (err) {
             if (err.response) {

@@ -12,7 +12,7 @@ export default function Dashboard(){
      const cotacoesRes = await api.get("/cotacaoCultura");
 
      setCotacoes(cotacoesRes.data)
-    console.log(cotacoes.data)
+    console.log(cotacoesRes.data)
   }
 
   useEffect(() => {
@@ -48,16 +48,13 @@ export default function Dashboard(){
               <div className='card-left'>
                 <i className="fa fa-seedling card-icon" aria-hidden="true"></i>
                 <div className='card-title'>
-                  <strong>{item.nome}</strong>
-                  <span className='muted'>Preço alvo: R$ {item.precoAlvoVenda.toFixed(2)}</span>
+                  <strong>{item.nomeCultura}</strong>
                 </div>
               </div>
 
               <div className='card-right'>
                 <div className='price'>R$ {item.precoAtual.toFixed(2)}</div>
                 <div className={`chg ${item.variacao24h >= 0 ? 'up' : 'down'}`}>
-                  <i className={`fa ${item.variacao24h >= 0 ? 'fa-arrow-up' : 'fa-arrow-down'}`}></i>
-                  {Math.abs(item.variacao24h).toFixed(1)}%
                 </div>
 
                 <div className={`action ${eva.highlight}`}>

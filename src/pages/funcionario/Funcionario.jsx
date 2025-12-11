@@ -3,7 +3,6 @@ import axios from 'axios';
 import Sidebar from '../components/Sidebar';
 import styles from './Funcionario.module.css';
 
-// Helper para formatar datas
 function formatDate(dateString) {
     if (!dateString) return '—';
     try {
@@ -17,7 +16,6 @@ function formatDate(dateString) {
     }
 }
 
-// Helper para formatar data e hora
 function formatDateTime(dateString) {
     if (!dateString) return '—';
     try {

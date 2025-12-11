@@ -106,6 +106,18 @@ export default function Sidebar({ active = 'dashboard', onNavigate = () => {} })
                     </div>
 
                 </Link>
+                 <Link to="/mtd">
+                <div
+                     role="button"
+                    tabIndex={0}
+                    onClick={() => onNavigate('Mtd')}
+                    style={styles.item(active === 'Mtd')}
+                    >
+                    <div style={styles.icon}>📊</div>
+                    {!collapsed && <div>MTD</div>}
+                    </div>
+
+                </Link>
             </nav>
 
             <button

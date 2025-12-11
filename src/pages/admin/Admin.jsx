@@ -3,7 +3,6 @@ import Sidebar from '../components/Sidebar';
 import axios from 'axios';
 import styles from './admin.module.css';
 
-// Helper para formatar datas
 function formatDate(dateString) {
     if (!dateString) return '—';
     try {
@@ -32,7 +31,7 @@ function formatDateTime(dateString) {
     }
 }
 
-const TABS = ['Dashboard','Funcionários','Horas','Maquinários','Uso Maquinário','Cotação','Culturas'];
+const TABS = ['Dashboard','Funcionários','Horas','Maquinários','Uso Maquinário','Culturas'];
 
 export default function AdminPage(){
     const [tab, setTab] = useState('Dashboard');

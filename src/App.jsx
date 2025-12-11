@@ -5,6 +5,7 @@ import Dashboard from './pages/dashboard/Dashborad'
 import Register from './pages/Register/Register'
 import AdminPage from './pages/admin/admin'
 import Funcionario from './pages/funcionario/Funcionario'
+import MTD from './pages/mtd/MTD'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Route path="/register" Component={Register}></Route>
       <Route path='/admin' Component={AdminPage}></Route>
       <Route path='/funcionario' Component={Funcionario}></Route>
+      <Route path='/mtd' Component={MTD}></Route>
     </Routes>
    </BrowserRouter>
   )
